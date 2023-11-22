@@ -63,7 +63,7 @@ fun HlaclassIIButton(
         Text(
             text = hlaclassII.text,
             fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.outline,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier
                 .padding(top = 13.dp, start = 20.dp, end = 20.dp, bottom = 13.dp )
         )

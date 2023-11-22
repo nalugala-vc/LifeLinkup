@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.example.project.recipients.presentation.components.BloodType
 import org.example.project.recipients.presentation.components.BloodTypeSelection
+import org.example.project.recipients.presentation.components.BodyOrgansDropdown
 import org.example.project.recipients.presentation.components.FormTextField
 import org.example.project.recipients.presentation.components.HLAClassIISelection
 import org.example.project.recipients.presentation.components.HLAClassISelection
@@ -97,7 +98,7 @@ fun BodyTypeInfoScreen(){
                 Spacer(modifier = Modifier.height(7.dp))
                 Text(
                     text = "HLA Class I",
-                    color = MaterialTheme.colorScheme.outlineVariant,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp
                 )
@@ -108,7 +109,7 @@ fun BodyTypeInfoScreen(){
                 Spacer(modifier = Modifier.height(20.dp))
                 Text(
                     text = "HLA Class II",
-                    color = MaterialTheme.colorScheme.outlineVariant,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp
                 )
@@ -116,6 +117,15 @@ fun BodyTypeInfoScreen(){
                 HLAClassIISelection { hlaClassII ->
                     selectedHlaclassII = hlaClassII
                 }
+                Spacer(modifier = Modifier.height(20.dp))
+                Text(
+                    text = "Body Organ Type",
+                    color = MaterialTheme.colorScheme.onBackground,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp
+                )
+                Spacer(modifier = Modifier.height(15.dp))
+                BodyOrgansDropdown()
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
                     onClick = {},

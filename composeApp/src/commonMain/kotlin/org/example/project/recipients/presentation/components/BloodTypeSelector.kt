@@ -68,21 +68,11 @@ fun BloodTypeButton(
         Text(
             text = bloodType.text,
             fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.outline,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier
                 .padding(top = 13.dp, start = 20.dp, end = 20.dp, bottom = 13.dp )
         )
     }
-}
-@Composable
-fun BloodTypeSelectionScreen() {
-    var selectedBloodType by remember { mutableStateOf<BloodType?>(null) }
-
-    BloodTypeSelection { bloodType ->
-        selectedBloodType = bloodType
-    }
-
-    // You can use the selectedBloodType for further processing or display
 }
 
 
