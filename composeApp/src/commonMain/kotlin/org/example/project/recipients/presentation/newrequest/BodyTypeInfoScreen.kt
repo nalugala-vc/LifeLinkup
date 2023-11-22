@@ -81,7 +81,7 @@ fun BodyTypeInfoScreen(){
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(
                     text = "Select your blood type!",
-                    color = MaterialTheme.colorScheme.outline,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontSize = 14.sp
                 )
                 Spacer(modifier = Modifier.height(15.dp))
