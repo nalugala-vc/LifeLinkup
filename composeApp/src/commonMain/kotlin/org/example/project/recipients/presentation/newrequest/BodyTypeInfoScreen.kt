@@ -78,7 +78,7 @@ fun BodyTypeInfoScreen(){
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp
                 )
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(7.dp))
                 Text(
                     text = "Select your blood type!",
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -135,7 +135,7 @@ fun BodyTypeInfoScreen(){
                     shape = RoundedCornerShape(10.dp)
                 ){
                     Text(
-                        text = "Next",
+                        text = "Finish",
                         fontWeight = FontWeight.Bold
                     )
                 }
