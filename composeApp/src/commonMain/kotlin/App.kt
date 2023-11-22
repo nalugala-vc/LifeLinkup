@@ -20,6 +20,7 @@ import org.example.project.core.presentation.LifeLinkupTheme
 import org.example.project.recipients.presentation.HomepageScreen
 import org.example.project.recipients.presentation.LoginScreen
 import org.example.project.recipients.presentation.SignupScreen
+import org.example.project.recipients.presentation.newrequest.EmergencyContactScreen
 import org.example.project.recipients.presentation.newrequest.PersonalInfoScreen
 
 @OptIn(ExperimentalResourceApi::class)
@@ -36,29 +37,8 @@ fun App(
             modifier = Modifier.fillMaxSize(),
             color = androidx.compose.material3.MaterialTheme.colorScheme.background
         ) {
-            PersonalInfoScreen(
-
-            )
+            EmergencyContactScreen()
         }
     }
 }
 
-
-//    MaterialTheme {
-//        var greetingText by remember { mutableStateOf("Hello World!") }
-//        var showImage by remember { mutableStateOf(false) }
-//        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-//            Button(onClick = {
-//                greetingText = "Compose: ${Greeting().greet()}"
-//                showImage = !showImage
-//            }) {
-//                Text(greetingText)
-//            }
-//            AnimatedVisibility(showImage) {
-//                Image(
-//                    painterResource("apple.png"),
-//                    null
-//                )
-//            }
-//        }
-//    }
