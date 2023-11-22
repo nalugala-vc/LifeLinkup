@@ -1,5 +1,7 @@
 package org.example.project.recipients.presentation.newrequest
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -7,7 +9,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -47,57 +51,61 @@ fun MedicalHistoryScreen(){
             )
         }
     ) {
-        Column  (
-            modifier = Modifier.padding(top = 70.dp, end = 20.dp, bottom = 20.dp, start = 20.dp )
-        )  {
-            Text(
-                text = "Medical History",
-                color = MaterialTheme.colorScheme.onBackground,
-                fontWeight = FontWeight.Bold,
-                fontSize = 20.sp
-            )
-            Spacer(modifier = Modifier.height(10.dp))
-            Text(
-                text = "Tell us more about your medical history and conditions!",
-                color = MaterialTheme.colorScheme.outline,
-                fontSize = 14.sp
-            )
-            Spacer(modifier = Modifier.height(30.dp))
-            FormTextField(
-                value =  "",
-                placeholder = "Brief Medical History",
-                error = null,
-                modifier = Modifier.fillMaxWidth(),
-                textFieldHeight = 130.dp
-            )
-            Spacer(modifier = Modifier.height(15.dp))
-            FormTextField(
-                value =  "",
-                placeholder = "Existing medical conditions, separate with comma",
-                error = null,
-                modifier = Modifier.fillMaxWidth(),
-                textFieldHeight = 130.dp
-            )
-            Spacer(modifier = Modifier.height(15.dp))
-            FormTextField(
-                value =  "",
-                placeholder = "List of current medications, separate with comma",
-                error = null,
-                modifier = Modifier.fillMaxWidth(),
-                textFieldHeight = 130.dp
-            )
-            Spacer(modifier = Modifier.height(20.dp))
-            Button(
-                onClick = {},
-                modifier = Modifier
-                    .size(width = 100.dp, height = 50.dp)
-                    .align(Alignment.End),
-                shape = RoundedCornerShape(10.dp)
-            ){
+        Box(
+            modifier = Modifier
+                .verticalScroll(rememberScrollState())
+                .padding(top = 70.dp, end = 20.dp, bottom = 20.dp, start = 20.dp )
+        ){
+            Column  {
                 Text(
-                    text = "Next",
-                    fontWeight = FontWeight.Bold
+                    text = "Medical History",
+                    color = MaterialTheme.colorScheme.onBackground,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp
                 )
+                Spacer(modifier = Modifier.height(10.dp))
+                Text(
+                    text = "Tell us more about your medical history and conditions!",
+                    color = MaterialTheme.colorScheme.outline,
+                    fontSize = 14.sp
+                )
+                Spacer(modifier = Modifier.height(30.dp))
+                FormTextField(
+                    value =  "",
+                    placeholder = "Brief Medical History",
+                    error = null,
+                    modifier = Modifier.fillMaxWidth(),
+                    textFieldHeight = 150.dp
+                )
+                Spacer(modifier = Modifier.height(15.dp))
+                FormTextField(
+                    value =  "",
+                    placeholder = "Existing medical conditions, separate with comma",
+                    error = null,
+                    modifier = Modifier.fillMaxWidth(),
+                    textFieldHeight = 150.dp
+                )
+                Spacer(modifier = Modifier.height(15.dp))
+                FormTextField(
+                    value =  "",
+                    placeholder = "List of current medications, separate with comma",
+                    error = null,
+                    modifier = Modifier.fillMaxWidth(),
+                    textFieldHeight = 150.dp
+                )
+                Spacer(modifier = Modifier.height(20.dp))
+                Button(
+                    onClick = {},
+                    modifier = Modifier
+                        .size(width = 100.dp, height = 50.dp)
+                        .align(Alignment.End),
+                    shape = RoundedCornerShape(10.dp)
+                ){
+                    Text(
+                        text = "Next",
+                        fontWeight = FontWeight.Bold
+                    )
+                }
             }
         }
     }
