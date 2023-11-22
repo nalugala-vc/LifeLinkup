@@ -20,6 +20,7 @@ import org.example.project.core.presentation.LifeLinkupTheme
 import org.example.project.recipients.presentation.HomepageScreen
 import org.example.project.recipients.presentation.LoginScreen
 import org.example.project.recipients.presentation.SignupScreen
+import org.example.project.recipients.presentation.newrequest.BodyTypeInfoScreen
 import org.example.project.recipients.presentation.newrequest.EmergencyContactScreen
 import org.example.project.recipients.presentation.newrequest.MedicalHistoryScreen
 import org.example.project.recipients.presentation.newrequest.PersonalInfoScreen
@@ -38,7 +39,7 @@ fun App(
             modifier = Modifier.fillMaxSize(),
             color = androidx.compose.material3.MaterialTheme.colorScheme.background
         ) {
-            MedicalHistoryScreen()
+            BodyTypeInfoScreen()
         }
     }
 }
