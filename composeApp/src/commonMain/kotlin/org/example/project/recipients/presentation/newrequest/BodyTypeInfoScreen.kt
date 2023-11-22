@@ -33,12 +33,15 @@ import androidx.compose.ui.unit.sp
 import org.example.project.recipients.presentation.components.BloodType
 import org.example.project.recipients.presentation.components.BloodTypeSelection
 import org.example.project.recipients.presentation.components.FormTextField
+import org.example.project.recipients.presentation.components.HLAClassISelection
+import org.example.project.recipients.presentation.components.HlaclassI
 import org.example.project.recipients.presentation.components.NotificationIcon
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BodyTypeInfoScreen(){
     var selectedBloodType by remember { mutableStateOf<BloodType?>(null) }
+    var selectedHlaclassI by remember { mutableStateOf<HlaclassI?>(null) }
 
     Scaffold (
         topBar = {
@@ -71,9 +74,44 @@ fun BodyTypeInfoScreen(){
                     fontWeight = FontWeight.Bold,
                     fontSize = 20.sp
                 )
+                Spacer(modifier = Modifier.height(10.dp))
+                Text(
+                    text = "Select your blood type!",
+                    color = MaterialTheme.colorScheme.outline,
+                    fontSize = 14.sp
+                )
                 Spacer(modifier = Modifier.height(15.dp))
                 BloodTypeSelection { bloodType ->
                     selectedBloodType = bloodType
+                }
+                Spacer(modifier = Modifier.height(20.dp))
+                Text(
+                    text = "Human Leukocyte Antigen",
+                    color = MaterialTheme.colorScheme.onBackground,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp
+                )
+                Spacer(modifier = Modifier.height(7.dp))
+                Text(
+                    text = "HLA Class I",
+                    color = MaterialTheme.colorScheme.outlineVariant,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+                Spacer(modifier = Modifier.height(15.dp))
+                HLAClassISelection { hlaClassI ->
+                    selectedHlaclassI = hlaClassI
+                }
+                Spacer(modifier = Modifier.height(20.dp))
+                Text(
+                    text = "HLA Class II",
+                    color = MaterialTheme.colorScheme.outlineVariant,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+                Spacer(modifier = Modifier.height(15.dp))
+                HLAClassISelection { hlaClassI ->
+                    selectedHlaclassI = hlaClassI
                 }
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
