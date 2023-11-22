@@ -33,8 +33,10 @@ import androidx.compose.ui.unit.sp
 import org.example.project.recipients.presentation.components.BloodType
 import org.example.project.recipients.presentation.components.BloodTypeSelection
 import org.example.project.recipients.presentation.components.FormTextField
+import org.example.project.recipients.presentation.components.HLAClassIISelection
 import org.example.project.recipients.presentation.components.HLAClassISelection
 import org.example.project.recipients.presentation.components.HlaclassI
+import org.example.project.recipients.presentation.components.HlaclassII
 import org.example.project.recipients.presentation.components.NotificationIcon
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -42,6 +44,7 @@ import org.example.project.recipients.presentation.components.NotificationIcon
 fun BodyTypeInfoScreen(){
     var selectedBloodType by remember { mutableStateOf<BloodType?>(null) }
     var selectedHlaclassI by remember { mutableStateOf<HlaclassI?>(null) }
+    var selectedHlaclassII by remember { mutableStateOf<HlaclassII?>(null) }
 
     Scaffold (
         topBar = {
@@ -110,8 +113,8 @@ fun BodyTypeInfoScreen(){
                     fontSize = 16.sp
                 )
                 Spacer(modifier = Modifier.height(15.dp))
-                HLAClassISelection { hlaClassI ->
-                    selectedHlaclassI = hlaClassI
+                HLAClassIISelection { hlaClassII ->
+                    selectedHlaclassII = hlaClassII
                 }
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
