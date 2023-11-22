@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.SemanticsProperties.ImeAction
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 
@@ -28,6 +29,7 @@ fun FormTextField(
     value: String,
     error: String?,
     placeholder: String,
+    textFieldHeight: Dp = 54.dp,
 //    onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
     backgroundColor: Color = Color(0xFFF8E9FF), // Set your desired background color
@@ -52,7 +54,9 @@ fun FormTextField(
                 focusedIndicatorColor = Color.Transparent,
                 cursorColor = placeholderColor
             ),
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(textFieldHeight)
         )
         Spacer(modifier = Modifier.height(8.dp))
         if(error != null){
