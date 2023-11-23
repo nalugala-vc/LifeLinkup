@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "302787209340",
+    "project_id": "lifelinkup-84a5e",
+    "storage_bucket": "lifelinkup-84a5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302787209340:android:8689130ccd784a354281f9",
+        "android_client_info": {
+          "package_name": "org.example.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvcP2QgQd2TmsUkkDPwQ9s5GHY-cwKVsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
