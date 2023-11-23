@@ -60,6 +60,7 @@ kotlin {
             implementation("dev.icerock.moko:mvvm-flow:0.16.1")
             implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
 
+
         }
     }
 }
@@ -113,6 +114,13 @@ compose.desktop {
             packageName = "org.example.project"
             packageVersion = "1.0.0"
         }
+    }
+}
+
+sqldelight{
+    database("LifelinkupDatabase") {
+        packageName = "org.example.project.database"
+        sourceFolders = listOf("sqldelight")
     }
 }
 

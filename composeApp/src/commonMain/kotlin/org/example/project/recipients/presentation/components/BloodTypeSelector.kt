@@ -12,6 +12,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import org.example.project.database.LifelinkupDatabase
 
 enum class BloodType(val text: String) {
     A_POSITIVE("A+"),
@@ -28,6 +29,7 @@ enum class BloodType(val text: String) {
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun BloodTypeSelection(onBloodTypeSelected: (BloodType) -> Unit) {
+
     var selectedBloodType by remember { mutableStateOf<BloodType?>(null) }
 
     FlowRow (

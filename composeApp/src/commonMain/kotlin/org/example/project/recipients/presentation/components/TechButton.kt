@@ -15,22 +15,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 
-//@OptIn(ExperimentalComposeUiApi::class, ExperimentalResourceApi::class)
-//@Composable
-//fun TechButton(
-//    onClick: () -> Unit,
-//    imageUrl: String?,
-//) {
-//    Box(
-//        modifier = Modifier
-//            .size(47.dp)
-//            .clip(CircleShape)
-//            .background(Color(0xFFB57EDC))
-//            .clickable { onClick() }
-//    ) {
-//        Image(
-//            painterResource(imageUrl),
-//            null
-//        )
-//    }
-//}
+@OptIn(ExperimentalComposeUiApi::class, ExperimentalResourceApi::class)
+@Composable
+fun TechButton(
+
+) {
+
+}

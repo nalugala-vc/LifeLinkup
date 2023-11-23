@@ -1,3 +1,40 @@
-CREATE TABLE  (
-
+CREATE TABLE recipientEntity (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    fullName TEXT NOT NULL ,
+    email TEXT NOT NULL,
+    password TEXT NOT NULL,
+    dateOfBirth TEXT,
+    phoneNumber TEXT,
+    country TEXT,
+    medicalHistory TEXT,
+    medialCondition TEXT,
+    currentMedication TEXT,
+    bloodType TEXT,
+    hlaClassI TEXT,
+    hlaClassII TEXT,
+    bodyOrganType TEXT
 );
+
+insertRecipient:
+INSERT OR REPLACE
+INTO recipientEntity(
+    id,
+    fullName,
+    email,
+    password,
+    dateOfBirth,
+    phoneNumber,
+    country,
+    medicalHistory,
+    medialCondition,
+    currentMedication,
+    bloodType,
+    hlaClassI,
+    hlaClassII,
+    bodyOrganType
+) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+
+getRecipientById:
+SELECT *
+FROM recipientEntity
+WHERE id = :id;

@@ -1,4 +1,4 @@
-package org.example.project.recipients.data
+package org.example.project.recipients.domain
 
 data class Recipient(
     val id: Long?,
