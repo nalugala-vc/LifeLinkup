@@ -13,24 +13,76 @@ class RecipientViewModel(
 ): ViewModel() {
     private val _state = MutableStateFlow(RecipientState())
 
-    var newContact: Recipient? by mutableStateOf(null)
+    var newRecipient: Recipient? by mutableStateOf(null)
         private set
 
     fun onEvent(event: RecipientEvent){
         when (event){
-            is RecipientEvent.OnBloodTypeChanged -> TODO()
-            is RecipientEvent.OnBodyOrganChanged -> TODO()
-            is RecipientEvent.OnCountryChanged -> TODO()
-            is RecipientEvent.OnCurrentMedicationChanged -> TODO()
-            is RecipientEvent.OnDateOfBirthChanged -> TODO()
-            is RecipientEvent.OnEmailChanged -> TODO()
-            is RecipientEvent.OnHLAClassIChanged -> TODO()
-            is RecipientEvent.OnHLAClassIIChanged -> TODO()
-            is RecipientEvent.OnMedicalConditionsChanged -> TODO()
-            is RecipientEvent.OnMedicalHistoryChanged -> TODO()
-            is RecipientEvent.OnNameChanged -> TODO()
-            is RecipientEvent.OnPasswordChanged -> TODO()
-            is RecipientEvent.OnPhoneNumberChanged -> TODO()
+            is RecipientEvent.OnBloodTypeChanged -> {
+                newRecipient = newRecipient?.copy(
+                bloodType = event.value
+            )
+        }
+            is RecipientEvent.OnBodyOrganChanged -> {
+                newRecipient = newRecipient?.copy(
+                    bodyOrganType = event.value
+                )
+            }
+            is RecipientEvent.OnCountryChanged -> {
+                newRecipient = newRecipient?.copy(
+                    country = event.value
+                )
+            }
+            is RecipientEvent.OnCurrentMedicationChanged -> {
+                newRecipient = newRecipient?.copy(
+                    currentMedication = event.value
+                )
+            }
+            is RecipientEvent.OnDateOfBirthChanged -> {
+                newRecipient = newRecipient?.copy(
+                    dateOfBirth = event.value
+                )
+            }
+            is RecipientEvent.OnEmailChanged -> {
+                newRecipient = newRecipient?.copy(
+                    email = event.value
+                )
+            }
+            is RecipientEvent.OnHLAClassIChanged -> {
+                newRecipient = newRecipient?.copy(
+                    hlaClassI = event.value
+                )
+            }
+            is RecipientEvent.OnHLAClassIIChanged -> {
+                newRecipient = newRecipient?.copy(
+                    hlaClassII = event.value
+                )
+            }
+            is RecipientEvent.OnMedicalConditionsChanged -> {
+                newRecipient = newRecipient?.copy(
+                    medicalCondition = event.value
+                )
+            }
+            is RecipientEvent.OnMedicalHistoryChanged -> {
+                newRecipient = newRecipient?.copy(
+                    medicalHistory = event.value
+                )
+            }
+            is RecipientEvent.OnNameChanged -> {
+                newRecipient = newRecipient?.copy(
+                    name = event.value
+                )
+            }
+            is RecipientEvent.OnPasswordChanged -> {
+                newRecipient = newRecipient?.copy(
+                    password = event.value
+                )
+            }
+            is RecipientEvent.OnPhoneNumberChanged -> {
+                newRecipient = newRecipient?.copy(
+                    phoneNumber = event.value
+                )
+            }
         }
     }
 }
